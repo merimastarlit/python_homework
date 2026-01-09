@@ -1,0 +1,20 @@
+import pandas as pd
+
+# Sample DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+        'Age': [24, 27, 22, 32],
+        'Score': [85, 92, 88, 76]}
+df = pd.DataFrame(data)
+
+# Select the 'Name' column
+print(df['Name'])
+
+# Select rows and specific columns
+print(df.loc[0:2, ['Name', 'Age']])
+
+# Select rows by position
+print(df.iloc[:2])  # First two rows
+
+print(df.loc[0:2])  # This prints the first 3 rows! It starts with the row with index 0 and continues up to and including the row with index 2.
+print(df.iloc[:2]) # This prints the first 2 rows only.  iloc[] works like list slicing.  It does not include the row with index 2.
+print(df.loc[[0,2]]) # This prints row 0 and row 2.  You specify a list of the rows you want.  You can't do this with lists!
