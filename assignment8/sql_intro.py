@@ -1,6 +1,8 @@
 import sqlite3
 
 # Task 3: Creating functions to each table to add data to the tables
+
+
 def add_magazine(cursor, title, publisher_id):
     try:
         cursor.execute("SELECT * FROM Magazines WHERE title = ?", (title,))
@@ -70,7 +72,7 @@ def add_subscription(cursor, subscriber_id, magazine_id, expiration_date):
 try:
     # Connect to the database
     with sqlite3.connect("../db/magazines.db") as conn:
-        #Task 3: adding the foreign keys
+        # Task 3: adding the foreign keys
         conn.execute("PRAGMA foreign_keys = 1")
         cursor = conn.cursor()
         print("Connection to the database was successful.")
@@ -116,7 +118,7 @@ try:
 
     print("Tables created successfully.")
 
-    #Task 3: Inserting 3 samples of data into each table
+    # Task 3: Inserting 3 samples of data into each table
     # Add publishers and store their IDs
     publisher1_id = add_publisher(cursor, 'ABC', 2003)
     publisher2_id = add_publisher(cursor, 'NYT', 2005)
@@ -144,7 +146,7 @@ try:
 
     # Task 4: Querying the database
 
-    #Writing a query to retrieve all information from the subscribers table
+    # Writing a query to retrieve all information from the subscribers table
     cursor.execute("SELECT * FROM Subscribers")
     subscribers = cursor.fetchall()
     print("All subscribers:")
@@ -158,7 +160,7 @@ try:
     for row in magazines:
         print(row)
 
-    #Write a query to find magazines for a particular publisher, one of the publishers you created. This requires a JOIN
+    # Write a query to find magazines for a particular publisher, one of the publishers you created. This requires a JOIN
     cursor.execute("""
         SELECT Magazines.*
         FROM Magazines
