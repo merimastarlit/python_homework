@@ -1,0 +1,30 @@
+# Task 5
+
+Question #1: 
+Which sections of the website are restricted for crawling?
+
+Answer:
+
+The Wikipedia robots.txt file blocks crawlers from accessing various site areas, including:
+- Dynamic script and API paths such as /w/, /api/, and /trap/
+
+- Special pages and administrative pages under /wiki/Special: and its variations
+
+- Many internal wiki pages for deletion discussions, user restrictions, arbitration, etc., like /wiki/Wikipedia:Articles_for_deletion/ and related discussion pages
+
+- In general, Wikipedia disallows bots from crawling non-article content and back-end or sensitive pages that aren’t meant for general indexing.
+
+
+
+Question #2: Are there specific rules for certain user agents?
+
+Answer:
+
+Yes, wikipedia robot.txt mentions:
+- who ignores 429 rate limit responses are spamming, there is a certain rate and speed limit and user agents have to respect, otherwise, they may be blocked. 
+
+- copy the entire sites, this is not allowed.
+
+- Need to use --wait option to set the delay between hits. hit many times in a second is unacceptable.
+
+- Need to have a reasonable request rates.
