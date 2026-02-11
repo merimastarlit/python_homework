@@ -1,0 +1,3 @@
+Question: Why websites use robots.txt?
+
+It's so important to have this one univeral document robot.txt in order to scrape the websites ethically. What it means to respect the rules defined by the sources of information where we are getting them from. Because it is a universal document, for any clarification, we can go and read this document where rules are stated and do the web scraping ethically. Ideally every user agent to follow the rules of ethics and this is the one way to decrease unethical uses. 
